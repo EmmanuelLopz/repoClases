@@ -8,7 +8,7 @@ class Coche{
         this->color = "gris";
         this->marca = "Toyota";
     }
-    
+
     void manejar(){
         cout << "El auto está conduciendo en este momento" << endl;
     }
@@ -19,6 +19,11 @@ class Coche{
     void setColor(string color){
         this->color = color;
     }
+
+    string getColor(){
+        return color;
+    }
+
     private:
     int precio;
     string color;
@@ -27,7 +32,12 @@ class Coche{
 
 
 int main(){
-
+    Coche miCoche;
+    miCoche.manejar();
+    miCoche.detener();
+    string newColor = "azul";
+    miCoche.setColor(newColor);
+    cout << miCoche.getColor() << endl;
 
     return 0;
 }
